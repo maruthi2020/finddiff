@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript">
+        var count =0,c1=0,c2=0,c3=0,c4=0,c5=0,c6=0;
+            function fun1()
+            {
+                if(c1 ==0 && c6 ==0)
+                {
+                    count++;
+                   alert("your score is" +count);
+		    document.getElementById('score').innerHTML="score :"+count;
+                }
+              if(c1==1 && count!=5)
+              alert("you already selected this difference");
+		c1 ++;
+		if(count==5)
+		{
+		alert("congratulations;"+"You completed the game."+"Your score is "+count); 
+		}                              
+            }
+            function fun2()
+            {
+               if(c2 ==0 && c6 ==0)
+                {
+                    count++;
+                 document.getElementById('score').innerHTML="score :"+count;
+                   alert("your score is" +count);
+                }
+              if(c2==1 && count!=5)
+              alert("you already selected this difference");
+                c2 ++;		
+		if(count ==5)
+		{
+		alert("congratulations;"+"You completed the game."+ +"Your score is "+count); 
+		}
+            }
+            function fun3()
+            {
+                if(c3==0 && c6==0)
+                {
+                    count++;
+                   document.getElementById('score').innerHTML="score :"+count;
+                   alert("your score is" +count);
+                }
+              if(c3==1 && count!=5)
+              alert("you already selected this difference");
+                c3++;
+	      	if(count==5)
+	    	{
+		alert("congratulations;"+"You completed the game." +"Your score is "+count); 
+		   }
+            }
+            function fun4()
+            {
+                
+                
+                if(c4==0 && c6==0)
+                {
+                    count ++;
+                    document.getElementById('score').innerHTML="score :"+count;
+                   alert("your score is" +count);
+                }
+              if(c4==1 && count!=5)
+              alert("you already selected this difference");
+                c4++;
+		if(count ==5)
+		{
+		alert("congratulations;"+"You completed the game." +"Your score is "+count); 
+		}
+            }
+	    function fun5()
+	    {
+		if(c5==0 && c6==0)
+		{
+		    count++;
+		     document.getElementById('score').innerHTML="score :"+count;
+                   alert("your score is" +count);
+		}
+              if(c5==1 && count!=5)
+              alert("you already selected this difference");
+		c5++;
+		if(count==5)
+		{
+		alert("congratulations;"+"You completed the game." +" Your score is "+count); 
+		}
+	    }
+            setTimeout(function(){ c6++;
+         alert("Time over."+" Your score is "+count);}, 35000);
+        </script>
+    </head>
+    <body bgcolor="blue">
+        <u><h1 align="center"><b>Find 5 differences</b></h1></u>
+<table bgcolor="aqua" align="right"><tr><td id="time">Timeleft :30s</td></tr>
+<tr><td id="score">Score :0</td></tr></table>
+<table bgcolor="yellow"><tr><td><p><font  size="5" color="purple">Instructions</font></p>
+    <ul type="square">
+        <li>Find the difference between the two pictures</li>
+        <li>click on difference </li>
+        <li>You Have a Time Limit of 30 seconds</li>
+        </td></tr></table>
+    </ul>
+
+<script>
+var timeLeft = 30;
+var elem = document.getElementById('time');
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+        doSomething();
+    } else {
+        elem.innerHTML = 'Time left :'+timeLeft + 's';
+        timeLeft--;
+    }
+}
+</script>
+      <table id="table" align="center" style="border:5px solid red"><tr><td><img src="download.jpg" id="map" usemap="#image-map">
+<map name="image-map">
+    <area onclick="fun1()" coords="198,149,211,147,218,151,215,159,208,163,198,158" shape="poly">
+    <area  onclick="fun2()" coords="223,64,226,81,243,92,254,102,264,91,256,75,255,60,232,51" shape="poly">
+    <area  onclick="fun3()" coords="26,143,25,122,25,106,47,103,73,111,109,163,75,187,29,181" shape="poly">
+    <area  onclick="fun4()" coords="131,207,127,221,125,233,109,227,108,208,110,199" shape="poly">
+    <area  onclick="fun5()" coords="274,293,242,293,225,283,213,265,222,239,237,224,257,215,267,214,274,217" shape="poly">
+    <area onclick="fun5()"   coords="587,207,562,210,544,222,540,249,539,269,534,275,556,287,584,294" shape="poly">
+    <area onclick="fun2()"   coords="542,65,556,54,571,61,575,75,575,94,566,106" shape="poly">
+    <area onclick="fun3()" coords="335,147,338,119,343,102,361,99,380,110,397,116,408,128,410,151" shape="poly">
+    <area onclick="fun1()" coords="511,151,525,148,529,157,511,163" shape="poly">
+    <area onclick="fun4()" coords="438,207,438,220,423,222,423,205,427,196" shape="poly">
+</map></td></tr></table>  
+    </body>
+</html>
